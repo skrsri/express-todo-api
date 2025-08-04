@@ -22,3 +22,8 @@ A minimal RESTful API built using **Node.js** and **Express** for managing a To-
 - body-parser (middleware for JSON parsing)
 
 
+📌 Note
+This project uses in-memory data, so all data will be lost when the server restarts. For persistence, you can later integrate MongoDB or PostgreSQL.
+
+🧑‍💻 Author
+Built with ❤️ using Node.js and Express.

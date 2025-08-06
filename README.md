@@ -1,17 +1,17 @@
-# 📝 Express To-Do API
+# 📝 Express.js Todo API
 
-A minimal RESTful API built using **Node.js** and **Express** for managing a To-Do list. This project demonstrates basic CRUD operations using in-memory data without any external database.
+A simple RESTful Todo API built with **Express.js** that performs CRUD operations using the **local JSON file system** for storage (no database required).
 
 ---
 
 ## 🚀 Features
 
-- ✅ View all To-Dos (`GET /todos`)
-- 🔍 View a single To-Do by ID (`GET /todos/:id`)
-- 🆕 Add a new To-Do (`POST /todos`)
-- ✏️ Update an existing To-Do (`PUT /todos/:id`)
-- ❌ Delete a To-Do (`DELETE /todos/:id`)
-- ⚠️ 404 handler for invalid routes
+- ✅ GET all todos
+- ✅ GET a todo by ID
+- ✅ POST a new todo
+- ✅ PUT to update a todo
+- ✅ DELETE a todo
+- ✅ Handles 404 errors for unknown routes
 
 ---
 
@@ -19,11 +19,47 @@ A minimal RESTful API built using **Node.js** and **Express** for managing a To-
 
 - Node.js
 - Express.js
-- body-parser (middleware for JSON parsing)
+- File System (`fs`)
+- Postman (for testing)
+
+---
+
+## 📁 Project Structure
+├── todos.json # Data store (JSON array)
+├── app.js # Main Express app with API routes
+├── README.md # Documentation
 
 
-📌 Note
-This project uses in-memory data, so all data will be lost when the server restarts. For persistence, you can later integrate MongoDB or PostgreSQL.
+---
+
+## 🛠️ API Endpoints
+
+| Method | Route           | Description         |
+|--------|------------------|---------------------|
+| GET    | `/todos`         | Fetch all todos     |
+| GET    | `/todos/:id`     | Get todo by ID      |
+| POST   | `/todos`         | Create new todo     |
+| PUT    | `/todos/:id`     | Update todo by ID   |
+| DELETE | `/todos/:id`     | Delete todo by ID   |
+
+---
+
+## 📬 Sample Todo Format
+
+```json
+{
+  "id": 12345,
+  "title": "Complete Node project",
+  "description": "Build an Express API for managing todos"
+}
+
+🚧 Future Improvements
+Add input validation
+
+Add persistent DB (MongoDB / PostgreSQL)
+
+Add user authentication
+
 
 🧑‍💻 Author
 Built with ❤️ using Node.js and Express.
